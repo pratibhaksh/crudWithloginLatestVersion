@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "pratibha",
+      "email": "jadhav@gmaiil.com",
+      "password": "123"
+    },
+    {
+      "id": "144b",
+      "firstName": "prati",
+      "lastName": "jadhav",
+      "email": "pratibha@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "c4a1",
+      "firstName": "test1",
+      "lastName": "test2",
+      "email": "pratibha@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "signup": [
+    {
+      "id": 1,
+      "firstName": "pratibha",
+      "lastName": "pratibha",
+      "email": "jadhav@gmaiil.com",
+      "password": "123"
+    }
+  ],
+  "policyUserList": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "policyType": "string",
+      "policyNumber": "89"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "policyType": "string",
+      "policyNumber": "89"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<button  mat-raised-button  (click)="openDialog($event)" type="submit">Add policy holder details</button>
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="userPolicyData">
+
+          <ng-container matColumnDef="policyType">
+            <mat-header-cell *matHeaderCellDef> policyType</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.policyType}} </mat-cell>
+          </ng-container>
+    <!-- Position Column -->
+    <ng-container matColumnDef="policyNumber">
+      <mat-header-cell *matHeaderCellDef>policyNumber </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.policyNumber}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef> EMail</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let user">
+      <button mat-icon-button (click)="editUser(user)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button (click)="deleteUser(user.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+ 
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

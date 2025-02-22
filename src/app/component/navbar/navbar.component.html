@@ -1,0 +1,16 @@
+
+<mat-toolbar color="primary">
+    <span class="app-name">Liburty-Mutual</span>
+    <span class="spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu" >
+      <ng-container *ngIf="getUserProfile">
+      <button mat-menu-item>{{getUserProfile?.email }}</button>
+      <button mat-menu-item>Logout</button>
+      </ng-container>
+    </mat-menu>
+  </mat-toolbar>
+  
