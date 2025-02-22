@@ -1,49 +1,68 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "name": "pratibha",
-      "email": "jadhav@gmaiil.com",
-      "password": "123"
-    },
-    {
-      "id": "144b",
-      "firstName": "prati",
-      "lastName": "jadhav",
-      "email": "pratibha@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": "c4a1",
-      "firstName": "test1",
-      "lastName": "test2",
-      "email": "pratibha@gmail.com",
-      "password": "12345"
-    }
-  ],
   "signup": [
     {
-      "id": 1,
+      "id": "1",
       "firstName": "pratibha",
       "lastName": "pratibha",
       "email": "jadhav@gmaiil.com",
       "password": "123"
+    },
+    {
+      "id": "2ece",
+      "firstName": "komal",
+      "lastName": "mane",
+      "email": "komal@gmail.com",
+      "password": "komal"
+    },
+    {
+      "id": "9ad3",
+      "email": "komal@gmail.com",
+      "password": "komal"
+    },
+    {
+      "id": "8368",
+      "email": "komal@gmail.com",
+      "password": "komal"
+    },
+    {
+      "id": "7c04",
+      "email": "komal@gmail.com",
+      "password": "komal"
+    },
+    {
+      "id": "1113",
+      "email": "komal@gmail.com",
+      "password": "komal"
+    },
+    {
+      "id": "7982",
+      "firstName": "samiksha",
+      "lastName": "shinde",
+      "email": "sama@gmail.com",
+      "password": "sama"
     }
   ],
   "policyUserList": [
     {
-      "id": 1,
+      "id": "1",
       "name": "John Doe",
       "email": "john.doe@example.com",
       "policyType": "string",
-      "policyNumber": "89"
+      "policyNumber": "90"
     },
     {
-      "id": 2,
-      "name": "Jane Smith",
-      "email": "jane.smith@example.com",
-      "policyType": "string",
-      "policyNumber": "89"
+      "id": "7b7d",
+      "name": "hridhan",
+      "email": "hridhan@gmail.com",
+      "policyType": "shortterm",
+      "policyNumber": "12"
+    },
+    {
+      "id": "d3bc",
+      "name": "hina",
+      "email": "hina@gmail.com",
+      "policyType": "life",
+      "policyNumber": "13"
     }
   ]
 }

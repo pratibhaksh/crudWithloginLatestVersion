@@ -2,7 +2,16 @@
 <button  mat-raised-button  (click)="openDialog($event)" type="submit">Add policy holder details</button>
 <div class="example-container mat-elevation-z8">
   <mat-table #table [dataSource]="userPolicyData">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
 
+    <!-- Weight Column -->
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef> EMail</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+    </ng-container>
           <ng-container matColumnDef="policyType">
             <mat-header-cell *matHeaderCellDef> policyType</mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.policyType}} </mat-cell>
@@ -14,16 +23,7 @@
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="email">
-      <mat-header-cell *matHeaderCellDef> EMail</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
-    </ng-container>
+  
 
 
     <ng-container matColumnDef="actions">

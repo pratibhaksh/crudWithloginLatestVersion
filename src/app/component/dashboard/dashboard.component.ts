@@ -12,6 +12,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MaterialModule } from '../../material/material.module';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { MatFormField } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,18 +24,27 @@ export class DashboardComponent implements OnInit{
 displayedColumns = ['name','email','policyType','policyNumber','actions'];
   dataSource = new MatTableDataSource<UserPolicy>();
   userPolicyData: UserPolicy[] = [];
+
   constructor(private userPolicyService:ApiService,public dialog: MatDialog){}
 
   openDialog(row: any): void {
-    this.dialog.open(AddUserPolicyComponent, {
-      data: row
+   const dailogRef =  this.dialog.open(AddUserPolicyComponent, {
+      data: {...row}
+    });
+    dailogRef.afterClosed().subscribe(result => {
+      if(result)
+    this.getAllUserPolicyDetails();
     });
   }
   ngOnInit(): void {
+   this.getAllUserPolicyDetails()
+  }
+  getAllUserPolicyDetails()
+  {
     this.userPolicyService.getAllUserPolicyList().subscribe(data=>{
-       this.userPolicyData = data
-   
-    })
+      this.userPolicyData = data
+  
+   })
   }
 
   editUser(user: any): void {

@@ -1,1 +1,10 @@
-<p>delet-user-policy works!</p>
+<div class="mat-elevation-z8">
+<h1 mat-dialog-title>Confirm</h1>
+<div mat-dialog-content>
+  <p>{{getData}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onConfirm()">Confirm</button>
+</div>
+</div>

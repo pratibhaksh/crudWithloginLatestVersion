@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../../service/api.service';
-import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatFormField, MatFormFieldControl, MatLabel } from '@angular/material/form-field';
 import { MatTable } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-add-user-policy',
-  imports: [MatFormField,MatLabel,ReactiveFormsModule],
+  imports: [MatFormField, MatLabel, ReactiveFormsModule,MatInputModule],
   templateUrl: './add-user-policy.component.html',
   styleUrl: './add-user-policy.component.scss'
 })

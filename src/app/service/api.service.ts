@@ -23,18 +23,18 @@ export class ApiService {
    
     addUserPolicyDetail(policyDetails:UserPolicy):Observable<UserPolicy>
     {
-      return this.http.post<UserPolicy>(this.apiUrl + '/userPolicyList', policyDetails)
+      return this.http.post<UserPolicy>(this.apiUrl + '/policyUserList', policyDetails)
     }
 
    
     updateUserPolicy(user: User): Observable<User> {
     //  return this.http.put<User>(`${this.apiUrlEdit}/${user.id}`, user);
-       return this.http.put<User>(`${this.apiUrl}/userPolicyList/${user.id}`, user);
+       return this.http.put<User>(`${this.apiUrl}/policyUserList/${user.id}`, user);
 
     }
 
     deleteUserPolicy(id: number): Observable<User> {
-         return this.http.delete<User>(`${this.apiUrl}/userPolicyList/${id}`);
+         return this.http.delete<User>(`${this.apiUrl}/policyUserList/${id}`);
  
       }
    
@@ -45,15 +45,19 @@ export class ApiService {
 
     login(email: string, password: string): Observable<boolean> {
 
-      return this.http.get<any[]>(`${this.apiUrl}/users?email=${email}&password=${password}`)
+      return this.http.get<any[]>(`${this.apiUrl}/signup?email=${email}&password=${password}`)
       .pipe(
         map(users => users.length > 0)
+        
       );
+      
     }
+
+    
 
     addRegistration(userPolicyListDetails:User)
     {
-      return this.http.post(`${this.apiUrl}/users`,userPolicyListDetails)
+      return this.http.post(`${this.apiUrl}/signup`,userPolicyListDetails)
     }
 
 
